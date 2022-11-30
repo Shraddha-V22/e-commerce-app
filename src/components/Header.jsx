@@ -206,6 +206,11 @@ export default function Header() {
     navigate("/login");
   }
 
+  function showProfile() {
+    handleMenuClose();
+    navigate("/profile");
+  }
+
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -216,7 +221,7 @@ export default function Header() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={showProfile}>Profile</MenuItem>
       <MenuItem onClick={handleMenuClose}>Account</MenuItem>
       <MenuItem onClick={logout}>Logout</MenuItem>
     </Menu>

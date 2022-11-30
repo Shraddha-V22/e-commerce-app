@@ -5,6 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
+import ListSubheader from "@mui/material/ListSubheader";
 import { Typography } from "@mui/material";
 import { ListItemText } from "@mui/material";
 import { CssBaseline } from "@mui/material";
@@ -34,17 +35,17 @@ export default function Footer() {
       >
         <Grid item xs={12} md={3}>
           <List disablePadding>
-            <ListItem>
-              <Typography
-                variant="p"
-                sx={{
-                  textTransform: "uppercase",
-                  color: theme.palette.grey[400],
-                }}
-              >
-                About
-              </Typography>
-            </ListItem>
+            <ListSubheader
+              component="p"
+              sx={{
+                textTransform: "uppercase",
+                color: theme.palette.grey[400],
+                bgcolor: theme.palette.grey[900],
+              }}
+            >
+              About
+            </ListSubheader>
+
             <ListItem sx={{ pb: 0 }}>
               <ListItemText>Contact Us</ListItemText>
             </ListItem>
@@ -58,17 +59,17 @@ export default function Footer() {
         </Grid>
         <Grid item xs={12} md={3}>
           <List disablePadding>
-            <ListItem>
-              <Typography
-                variant="p"
-                sx={{
-                  textTransform: "uppercase",
-                  color: theme.palette.grey[400],
-                }}
-              >
-                Help
-              </Typography>
-            </ListItem>
+            <ListSubheader
+              component="p"
+              sx={{
+                textTransform: "uppercase",
+                color: theme.palette.grey[400],
+                bgcolor: theme.palette.grey[900],
+              }}
+            >
+              Help
+            </ListSubheader>
+
             <ListItem sx={{ pb: 0 }}>
               <ListItemText>Payments</ListItemText>
             </ListItem>
@@ -85,17 +86,16 @@ export default function Footer() {
         </Grid>
         <Grid item xs={12} md={3}>
           <List disablePadding>
-            <ListItem>
-              <Typography
-                variant="p"
-                sx={{
-                  textTransform: "uppercase",
-                  color: theme.palette.grey[400],
-                }}
-              >
-                Social
-              </Typography>
-            </ListItem>
+            <ListSubheader
+              component="p"
+              sx={{
+                textTransform: "uppercase",
+                color: theme.palette.grey[400],
+                bgcolor: theme.palette.grey[900],
+              }}
+            >
+              Social
+            </ListSubheader>
             <ListItem sx={{ pb: 0 }}>
               <ListItemText>Facebook</ListItemText>
             </ListItem>
@@ -112,16 +112,15 @@ export default function Footer() {
         </Grid>
         <Grid item xs={12} md={3}>
           <List disablePadding>
-            <ListItem>
-              <Typography
-                variant="p"
-                sx={{
-                  color: theme.palette.grey[400],
-                }}
-              >
-                Registered Office Address
-              </Typography>
-            </ListItem>
+            <ListSubheader
+              component="p"
+              sx={{
+                color: theme.palette.grey[400],
+                bgcolor: theme.palette.grey[900],
+              }}
+            >
+              Registered Office Address
+            </ListSubheader>
             <ListItem>
               <ListItemText>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -131,7 +130,7 @@ export default function Footer() {
           </List>
         </Grid>
       </Grid>
-      <Typography sx={{ mt: theme.spacing(2) }}>Made with 💗</Typography>
+      <Typography sx={{ mt: theme.spacing(2) }}>©️2022 Ecom.com</Typography>
     </Toolbar>
   );
 }

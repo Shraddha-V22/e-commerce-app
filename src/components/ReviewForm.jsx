@@ -7,6 +7,7 @@ import Grid from "@mui/material/Grid";
 import { useSelector } from "react-redux";
 import { getSubtotal } from "../utils";
 import { useTheme } from "@mui/material";
+import { Box } from "@mui/material";
 
 export default function ReviewForm() {
   const cart = useSelector((state) => state.cart?.value);
@@ -67,14 +68,14 @@ export default function ReviewForm() {
           </Typography>
           <Grid container>
             {payments.map(({ name, detail }) => (
-              <div key={name}>
+              <React.Fragment key={name}>
                 <Grid item xs={6}>
                   <Typography gutterBottom>{name}</Typography>
                 </Grid>
                 <Grid item xs={6}>
                   <Typography gutterBottom>{detail}</Typography>
                 </Grid>
-              </div>
+              </React.Fragment>
             ))}
           </Grid>
         </Grid>
