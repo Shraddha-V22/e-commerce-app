@@ -14,6 +14,8 @@ import AuthProvider, { useAuth } from "./firebase/Auth";
 import { Navigate } from "react-router-dom";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
+import ProfileInfo from "./components/ProfileInfo";
+import AddForProfilePage from "./components/AddForProfilePage";
 
 function ProtectedRoute({ children }) {
   const { user } = useAuth();
@@ -29,7 +31,10 @@ const router = createBrowserRouter(
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/profile" element={<Profile />}>
+          <Route index element={<AddForProfilePage />} />
+          <Route index path="/profile/profile-info" element={<ProfileInfo />} />
+        </Route>
         <Route
           path="/checkout"
           element={

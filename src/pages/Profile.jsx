@@ -18,10 +18,17 @@ import { useTheme } from "@mui/material";
 import { CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useAuth } from "../firebase/Auth";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
   const { user } = useAuth();
+  const personalInfo = useRef(false);
   const theme = useTheme();
+  const navigate = useNavigate();
+
   return (
     <Container sx={{ mt: 5 }}>
       <Grid container spacing={2}>
@@ -95,7 +102,10 @@ export default function Profile() {
                 </ListItem>
                 <ListItem disablePadding>
                   <ListItemButton>
-                    <ListItemText primary="Profile Information" />
+                    <ListItemText
+                      primary="Profile Information"
+                      onClick={() => navigate("/profile/profile-info")}
+                    />
                   </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
@@ -184,15 +194,7 @@ export default function Profile() {
           </Grid>
         </Grid>
         <Grid item xs={12} md={8}>
-          <Card>
-            <CardMedia
-              component="img"
-              image="https://static.vecteezy.com/system/resources/previews/000/178/364/original/super-sale-offer-and-discount-banner-template-for-marketing-and-vector.jpg"
-            />
-            <CardContent>
-              <Link to="/">Shop Products</Link>
-            </CardContent>
-          </Card>
+          <Outlet />
         </Grid>
       </Grid>
     </Container>
