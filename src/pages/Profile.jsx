@@ -3,8 +3,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
-import Card from "@mui/material/Card";
-import { CardMedia } from "@mui/material";
+import Paper from "@mui/material/Paper";
 import AccountCircleRoundedIcon from "@mui/icons-material/AccountCircleRounded";
 import ShopIcon from "@mui/icons-material/Shop";
 import PersonIcon from "@mui/icons-material/Person";
@@ -15,17 +14,12 @@ import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import ListItemButton from "@mui/material/ListItemButton";
 import { useTheme } from "@mui/material";
-import { CardContent } from "@mui/material";
-import { Link } from "react-router-dom";
 import { useAuth } from "../firebase/Auth";
-import { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
   const { user } = useAuth();
-  const personalInfo = useRef(false);
   const theme = useTheme();
   const navigate = useNavigate();
 
@@ -34,7 +28,7 @@ export default function Profile() {
       <Grid container spacing={2}>
         <Grid item container xs={12} md={4} spacing={1}>
           <Grid item sm={12}>
-            <Card sx={{ py: 0, px: 2 }}>
+            <Paper sx={{ py: 0, px: 2 }}>
               <List>
                 <ListItem
                   sx={{
@@ -59,10 +53,10 @@ export default function Profile() {
                   </ListItemText>
                 </ListItem>
               </List>
-            </Card>
+            </Paper>
           </Grid>
           <Grid item sm={12}>
-            <Card>
+            <Paper>
               <List
                 sx={{ borderBottom: `1px solid ${theme.palette.grey[300]}` }}
               >
@@ -190,7 +184,7 @@ export default function Profile() {
                   </ListItemButton>
                 </ListItem>
               </List>
-            </Card>
+            </Paper>
           </Grid>
         </Grid>
         <Grid item xs={12} md={8}>
