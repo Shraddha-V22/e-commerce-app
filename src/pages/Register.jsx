@@ -1,11 +1,8 @@
 import React from "react";
-// import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-// import FormControlLabel from "@mui/material/FormControlLabel";
-// import CheckBox from "@mui/material/CheckBox";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";

@@ -1,14 +1,11 @@
 import React from "react";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import Grid from "@mui/material/Grid";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListSubheader from "@mui/material/ListSubheader";
-import { Typography } from "@mui/material";
-import { ListItemText } from "@mui/material";
-import { CssBaseline } from "@mui/material";
+import Typography from "@mui/material/Typography";
+import ListItemText from "@mui/material/ListItemText";
 import { useTheme } from "@mui/material";
 
 export default function Footer() {
